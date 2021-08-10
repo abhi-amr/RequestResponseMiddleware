@@ -59,6 +59,8 @@ namespace RequestResponseModification
 
             app.UseAuthorization();
 
+            app.UseMiddleware<MyMiddleware>();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
